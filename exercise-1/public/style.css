@@ -1,0 +1,22 @@
+.userDetail {
+    display: none;
+}
+
+.btn-div {
+    margin-top: 10px;
+}
+
+.listHeading {
+    padding-left: 30px;
+}
+.toggleButton {
+    padding: 8px 19px;
+    background: #03a9f4;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="listHeading">User List</h2>
+        <div id="test">
+            <script id="user-list" type="text/x-handlebars-template">
+        <ul class="people_list"> {{#each usersList}} 
+            <li class="list">                
+                <h4>{{name}}</h4>
+                <img src={{avatar}} alt={{name}}>
+                <div class="userDetail">
+                   <p><b>Id:</b>. {{id}}</p>
+                   <p><b>Created at:</b> {{createdAt}}</p>
+               </div>
+               <div class="btn-div">
+               <button class="toggleButton" onclick="toggleDisplay(this.value)" value="{{@index}}">Detail</button>
+            </div>
+            </li>
+             {{/each}} 
+            </ul>
+    </script>
+        </div>
+    </div>
+    <script type="text/javascript" src="./main.js">  </script>
+</body>
+
+</html>

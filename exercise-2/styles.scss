@@ -1,0 +1,202 @@
+/* Basic Style */
+body {
+  background: #ffffff;
+  color: #333;
+  font-family: Lato, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Container Start */
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+  box-shadow: 0px 1px 24px 5px #edecec;
+  margin-top: 50px;
+  ul {
+      margin: 0px;
+      padding: 0;
+      li {
+          display: flex;
+          overflow: hidden;
+          padding: 20px 0px;
+          border-bottom: 1px solid #eee;
+          > input[type="checkbox"] {
+              margin: 0 10px;
+              position: relative;
+            }
+          > label {
+              font-size: 18px;
+              width: 226px;
+              padding: 0 0 0 11px;
+              line-height: 40px;
+              border: 1px solid transparent;
+              min-height: 40px;
+              font-weight: 600;
+          }
+          >  input[type="text"] {
+              width: 226px;
+              font-size: 18px;
+              padding: 0 0 0 11px;
+              line-height: 33px;
+              border: 1px solid #ccc;
+              min-height: 40px;
+          }
+          button{
+              width: 65px;
+              height: 35px;
+          }
+          .delete {
+              background-color: #bd2130;
+              border-color: #b21f2d;
+              color: white;
+              &:hover{
+                  background-color: #c82333;
+                  border-color: #bd2130;
+              }
+              &:focus{
+                  border: 2px solid black;
+              }
+          }
+          .edit{
+              background-color: #1e7e34;
+              border-color: #1c7430;
+              color: white;
+              &:hover{
+                  background-color: #218838;
+                  border-color: #1e7e34;
+              }
+              &:focus{
+                  border: 2px solid black;
+              }
+          }
+          input[type=text] {
+              display :none;
+            }
+        }
+        .editMode{
+            input[type=text] {
+              display :block;
+            }
+            label {
+              display :none;
+            }
+        } 
+      li, h3 {
+          clear :both;
+          list-style :none;
+          align-items: center;
+          
+        }
+    }
+    input{
+      button {
+          outline: none;
+        }
+    }
+    button {
+      background: none;
+      border: 0px;
+      border: 0px;
+      color: #888888;
+      width: 100px;
+      height: 46px;
+      font-family: Lato, sans-serif;
+      cursor: pointer;
+      margin-left: 20px;
+      border-radius: 8px;
+      &:hover {
+          color: #333;
+        }
+      &:focus{
+          border: 2px solid black;
+      }
+    }
+    h3, label{
+      #new-task-label {
+          color: #333333;
+          font-weight: 700;
+          font-size: 15px;
+          border-bottom: 2px solid #333;
+          padding: 30px 0 10px;
+          margin: 0px;
+          text-transform: uppercase;
+        }
+    }
+    form {
+       
+      .add-items{
+          display: flex;
+          input{
+              #new-task{
+                  width: calc(100% - 70px);
+                }
+          }
+          .button {
+              background: #ccc;
+              padding: 6px 12px;
+              font-size: 18px;
+              margin: 0;
+              border-radius: 8px;
+              margin-left: 20px;
+              background-color: #007bff;
+              color: white;
+              &:hover{
+                  background-color: #0069d9;
+                  border-color: #0062cc;
+              }
+            }
+        }
+      #new-task  {
+          width: calc(100% - 70px);
+          margin: 0;
+          font-size: 18px;
+          line-height: 18px;
+          height: 24px;
+          padding: 10px;
+          border: 1px solid #ddd;
+          background: #fff;
+          border-radius: 6px;
+          font-family: Lato, sans-serif;
+          color: #888;
+          &:focus {
+              background-color: rgb(241, 241, 232);
+              border: 2px solid rgb(70, 69, 69);
+              color: #333;
+            }
+      }
+    }
+    #completed-tasks {
+      label {
+          text-decoration: line-through;
+          color: #888;
+        }
+    }
+    .error{
+      color: red;
+    }
+}
+
+
+  /* Media Query */
+  @media (max-width: 375px){
+      .container form{
+        text-align: center;
+      }
+      .container form label{
+        text-align: initial;
+      }
+      .container form .add-items{
+        display: block;
+      }
+      .container form .add-items input{
+        width: 100%;
+      }
+      .container .add-items button{
+        margin-top: 10px !important;
+        border-radius: 5px;
+        height: 40px;
+      }
+    }
